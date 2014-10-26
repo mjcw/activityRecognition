@@ -11,13 +11,14 @@ This course project uses the data collected from the accelerometers from the Sam
 ## Using the script
 To run the script use the following:
 
-'''
+```
 > setwd("<directoryOfTheRepo>")
 > source('run_analysis.R')
 > tidyActivityRecognitionData("tidy.txt")
 > data <- read.table("tidy.txt", header=TRUE)
 > View(data)
-'''
+```
+
 
 
 
