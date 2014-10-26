@@ -98,7 +98,7 @@ readData <- function(dataFile, subjectsFile, activityLabelsFile){
   # join data by binding columns
   data <- cbind(subjects, activityData, dataPoints)
   
-  # return training data
+  # return data set
   data
 }
 
