@@ -14,6 +14,9 @@ tidyActivityRecognitionData <- function(outputFileName="tidyData.txt"){
   dataMelt <- melt(activityData, id=c("subject", "activity"), measure.vars=variables)
   tidyData <- dcast(dataMelt, subject + activity ~ variable, mean)
   
+  # Update the column names for each variable by adding a prefix "Average"
+  names(tidyData) <- lapply(columnNames, function(x) addPrefixToColumnName("Average", x))
+  
   # write tidyData to file outputFileName
   write.table(tidyData, outputFileName, row.name=FALSE)
 }
@@ -122,4 +125,14 @@ getMeanAndStdColumnNames <- function(columnNames){
   filter <- grepl("mean\\(\\)", columnNames) | 
     grepl("std\\(\\)", columnNames) 
   filter
+}
+
+#' Adds prefix to column name
+#' @return Column name with added prefix if the column name is not "subject" or "activity"
+addPrefixToColumnName <- function(prefix, columnName){
+  newColumnName = columnName
+  if (columnName != "subject"  && columnName != "activity"){
+    newColumnName = paste(prefix, columnName)
+  }
+  newColumnName
 }
