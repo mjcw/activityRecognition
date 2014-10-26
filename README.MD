@@ -1,4 +1,4 @@
-Tidy data for Activiy Recognition data set
+Tidy data for Activity Recognition data set
 =========
 This course project uses the data collected from the accelerometers from the Samsung Galaxy S smartphone for Activity Recognition and generates a tidy data set.
 
@@ -43,7 +43,11 @@ The ```readActivityRecognitionData()``` function performs the following operatio
 ```readData()``` is the heart of reading the data set. It reads the feature data set, subject data, and activity data. It then assign column names to each and combines the data using ```cbind```. It is called by ```readTrainingData()``` and ```readTestData()``` to read the training data and test data respectively -- both the functions pass appropriate files names to ```readData()``` to perform the task.
 
 
+## Acknowledgement
 
+The following publication [1] was used for the data.
+
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
 
 
