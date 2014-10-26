@@ -1,4 +1,4 @@
-Tidy data for Activiy Recognition
+Tidy data for Activiy Recognition data set
 =========
 This course project uses the data collected from the accelerometers from the Samsung Galaxy S smartphone for Activity Recognition and generates a tidy data set.
 
@@ -19,6 +19,9 @@ To run the script use the following:
 > View(data)
 ```
 
+## Working of the script
+
+Main function of the script is ```tidyActivityRecognitionData()```
 
 
 
